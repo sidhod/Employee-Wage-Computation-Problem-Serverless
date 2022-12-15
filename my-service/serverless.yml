@@ -94,8 +94,8 @@ functions:
     handler: functions/calculateWageNoWorkingDays.calculateWageNoWorkingDays
     events: # uncomment these lines
       - http:
-          path: calculateWageNoWorkingDays/get
-          method: get
+          path: calculateWageNoWorkingDays
+          method: post
 #      - websocket: $connect
 #      - s3: ${env:BUCKET}
 #      - schedule: rate(10 minutes)
