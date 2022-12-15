@@ -88,8 +88,8 @@ functions:
     handler: functions/calculateEmployeeWageForMonth.employeeWageForMonth
     events: # uncomment these lines
       - http:
-          path: employeeWageForMonth/get
-          method: get
+          path: employeeWageForMonth
+          method: post
   calculateWageNoWorkingDays:
     handler: functions/calculateWageNoWorkingDays.calculateWageNoWorkingDays
     events: # uncomment these lines
