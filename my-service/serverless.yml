@@ -83,7 +83,7 @@ functions:
     events: # uncomment these lines
       - http:
           path: implementationSwitchCase/get
-          method: get
+          method: post
   employeeWageForMonth:
     handler: functions/calculateEmployeeWageForMonth.employeeWageForMonth
     events: # uncomment these lines

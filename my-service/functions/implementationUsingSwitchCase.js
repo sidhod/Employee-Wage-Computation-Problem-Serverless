@@ -1,8 +1,10 @@
 'use strict';
-module.exports.implementationSwitchCase = async () => {
-    var IS_Full_Time = 1;
-    var IS_Part_Time = 2;
-    var EMP_RATE_PER_HOUR = 20;
+module.exports.implementationSwitchCase = async (event, contex, callback) => {
+    const IS_Full_Time = 1;
+    const IS_Part_Time = 2;
+    //var EMP_RATE_PER_HOUR = 20;
+    let data = JSON.parse(event.body);
+    console.log(data);
     var empHrs = 0;
     var empWage = 0;
     var empCheck = Math.floor(Math.random() * 3) + 0;
@@ -16,8 +18,11 @@ module.exports.implementationSwitchCase = async () => {
         default:
             empHrs = 0;
     }
-    empWage = empHrs * EMP_RATE_PER_HOUR;
-    return `Emp Wage: ${empWage}`
+    empWage = empHrs * data.EMP_RATE_PER_HOUR;
+    callback(null, {
+        statusCode: 200,
+        body: `Emp Wage: ${empWage}`
+    })
 
 }
 
