@@ -70,8 +70,8 @@ functions:
     handler: functions/calculateEmployeeWage.calculateEmployeeWage
     events: # uncomment these lines
       - http:
-          path: calculateEmployeeWage/get
-          method: get
+          path: calculateEmployeeWage
+          method: post
   addPartTimeEmployeeWage:
     handler: functions/addPartTimeWage.addPartTimeEmployeeWage
     events: # uncomment these lines
