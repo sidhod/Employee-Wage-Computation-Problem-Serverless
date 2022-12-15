@@ -76,8 +76,8 @@ functions:
     handler: functions/addPartTimeWage.addPartTimeEmployeeWage
     events: # uncomment these lines
       - http:
-          path: addPartTimeEmployeeWage/get
-          method: get
+          path: addPartTimeEmployeeWage
+          method: post
   implementationSwitchCase:
     handler: functions/implementationUsingSwitchCase.implementationSwitchCase
     events: # uncomment these lines
